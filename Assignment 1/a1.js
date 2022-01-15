@@ -4,21 +4,21 @@ var serverResponses = ["Welcome to WEB700 Assignment 1","This assignment was pre
 
 
 function httpRequest(httpVerb,path){
-    for(i=0;i<serverPaths.length;i++)
+    for(i=0;i<serverPaths.length;i++) //iterates over 0 till the last index of serverPaths array
     {
-        if (serverPaths[i] == path && serverVerbs[i] == httpVerb)
+        if (serverPaths[i] == path && serverVerbs[i] == httpVerb) //checks if the path and httpVerb at ith index is same as the path and httpverb passed as function parameters
         {
-            break;            
+            break; //breaks out of the for loop
         }
     }
 
     if (serverPaths[i] == path && serverVerbs[i] == httpVerb)
     {
-        return `200: ${serverResponses[i]}`;
+        return `200: ${serverResponses[i]}`; //returns the server response at the ith index of the serverResponses array
     }
     else
     {
-        return `404: Unable to process ${httpVerb} request for ${path}`
+        return `404: Unable to process ${httpVerb} request for ${path}`; //returns the 404 message since there is a mismatch
     }    
 }
 
