@@ -7,3 +7,9 @@
 *  Name: Rijoe Chacko Mathew Student ID: 132469214 Date: 01/30/2022
 *
 ********************************************************************************/
+
+var collegeData = require("./modules/collegeData.js");
+
+collegeData.initialize().then(success => {
+    collegeData.getAllStudents().then(success => {console.log(`Successfully retrieved ${success} students`)}).catch(error => {console.log('FAILED: ' + error)})
+}).catch(error => {console.log('FAILED: ' + error)});
