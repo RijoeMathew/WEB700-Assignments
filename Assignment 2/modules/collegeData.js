@@ -6,44 +6,52 @@ class Data{
 }
 
 var dataCollection=null;
+var fs = require('fs');
 
 module.exports.initialize = function(){
 return new Promise(function(resolve, reject){    
-    const fs = require('fs');
-    console.log('#1');
+    
+    
     var studentDataFromFile = null;
-    var courseDataFromFile = null;
-    console.log('#2');
+    var courseDataFromFile = null;    
+    
+    const studentPromise = new Promise(function(resolve,reject){    
     fs.readFile('./data/students.json', 'utf8', function(err, data){
-        console.log('#3');
+        
         if (err){
-            console.log('#4');
+            console.log('#4'); 
             reject("unable to read students.json")
             return; // exit the function
         }
-        console.log('#5');
+        
         studentDataFromFile = JSON.parse(data); // convert the JSON from the file into an array of objects 
+        resolve('Read students.json file');
+    });   
+
     });
-    console.log('#6');
+
+    
+    const coursePromise = new Promise(function(resolve,reject){
     fs.readFile('./data/courses.json', 'utf8', function(err, data){
-        console.log('#7');
+        
         if (err){
-            console.log('#8');
             reject("unable to read courses.json")
             return; // exit the function
         }
-        console.log('#9');
+        
         courseDataFromFile = JSON.parse(data); // convert the JSON from the file into an array of objects  
-               
+        resolve('Read courses.json file');       
     });
-    console.log('#10');
-    dataCollection = new Data(studentDataFromFile, courseDataFromFile);
-    console.log('#11');
-    
-    resolve("initialize() complete"); 
-    
-    console.log('#12'); 
-})
+
+    });
+
+    studentPromise.then(success => {coursePromise.then(success => 
+        {   
+            dataCollection = new Data(studentDataFromFile, courseDataFromFile);
+            resolve('initialize() successfully completed'); 
+        }).catch(error => {console.log('FAILED: ' + error)})
+    }).catch(error => {console.log('FAILED: ' + error)});
+});
 
 };
 
@@ -56,34 +64,35 @@ return new Promise(function(resolve, reject){
     else{
         reject("no results returned");
     }    
-})
+});
 };
 
 
 module.exports.getTAs = function(){
 return new Promise(function(resolve, reject){
-    var studentsTAs={};
+    var studentsTAs= [];
+
     for(i=0;i<dataCollection.students.length;i++) //iterates over 0 till the last index of dataCollection.students array
-    {
+    {       
         if (dataCollection.students[i].TA){
-            studentsTAs+=dataCollection.students[i];
+            studentsTAs.push(dataCollection.students[i]);
         }
     }
 
-    if (studentsTAs.length == 0){
-        reject("no results returned");
+    if (studentsTAs.length != 0){
+        resolve(studentsTAs);        
     }
     else{
-        resolve(studentsTAs);
+        reject("no results returned");
     }      
-})
+});
 };
 
 
 
 module.exports.getCourses = function(){
 return new Promise(function(resolve, reject){
-    if (dataCollection.courses.length == 0){
+    if (dataCollection.courses.length != 0){
         resolve(dataCollection.courses);
     }
     else{

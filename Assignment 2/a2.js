@@ -10,6 +10,9 @@
 
 var collegeData = require("./modules/collegeData.js");
 
+
 collegeData.initialize().then(success => {
-    collegeData.getAllStudents().then(success => {console.log(`Successfully retrieved ${success} students`)}).catch(error => {console.log('FAILED: ' + error)})
+    collegeData.getAllStudents().then(success => {console.log(`Successfully retrieved ${success.length} students`)}).catch(error => {console.log('FAILED: ' + error)});
+    collegeData.getCourses().then(success => {console.log(`Successfully retrieved ${success.length} courses`)}).catch(error => {console.log('FAILED: ' + error)});
+    collegeData.getTAs().then(success => {console.log(`Successfully retrieved ${success.length} TAs`)}).catch(error => {console.log('FAILED: ' + error)});
 }).catch(error => {console.log('FAILED: ' + error)});
