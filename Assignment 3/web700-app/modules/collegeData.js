@@ -143,15 +143,17 @@ module.exports.getStudentByNum = function(num){
     return new Promise(function(resolve, reject){
         
         var studentObj = {};
+        var objectFound = false;
         
         for(i=0;i<dataCollection.students.length;i++) //iterates over 0 till the last index of dataCollection.students array
         {       
             if (dataCollection.students[i].studentNum == num){ //checks if the studentNum property of the particular student object is matches with num
                 studentObj = dataCollection.students[i]; //add the student object to the studentTsA array
+                objectFound = true;
             }
         }
 
-        if (studentObj != null){ //checks if student object is available
+        if (objectFound){ //checks if student object is available
             resolve(studentObj);  //resolve the promise since student object is available
         }
         else{
