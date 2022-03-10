@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB700</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="/public/css/theme.css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Rijoe Chacko Mathew</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/htmlDemo">Html Demo</a></li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
+					<li class="nav-item"><a class="nav-link" href="/tas">Teaching Assistants</a></li>
+					<li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<main class="col-md-12">
+
+					<br><br>
+					<section>
+					<h4>Tables</h4>
+					<table style="width:40%; background: white; border-color: rgb(228, 226, 226);" border="1px">
+						<caption style="font-size: small; color: rgb(161, 161, 161)">Table 1</caption>
+					
+						<thead>
+							<tr>
+								<th colspan="4" style="text-align:center; background: rgb(228, 226, 226)">Aisle & Price Details</th>
+							</tr>
+
+							<tr>
+								<th>Item Name</th>
+								<th>Category</th>
+								<th>Aisle</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+					
+						<tbody>
+							<tr>
+								<td>Apple</td>
+								<td rowspan="3">Fruits</td>
+								<td rowspan="2">6</td>
+								<td>$5</td>
+							</tr>							
+
+							<tr>
+								<td>Orange</td>
+								<td>$3</td>
+							</tr>
+
+							<tr>
+								<td>Lemon</td>
+								<td>2</td>
+								<td>$2</td>
+							</tr>
+
+							<tr>
+								<td>Milk</td>
+								<td rowspan="5">Diary</td>
+								<td rowspan="2">7</td>
+								<td>$5</td>
+							</tr>
+
+							<tr>
+								<td>Eggs</td>
+								<td>$5.1</td>
+							</tr>
+
+							<tr>
+								<td>Butter</td>
+								<td rowspan="3">8</td>
+								<td>$1.89</td>
+							</tr>
+
+							<tr>
+								<td>Cheese</td>
+								<td>$2.22</td>
+							</tr>
+
+							<tr>
+								<td>Yogurt</td>
+								<td>$1</td>
+							</tr>
+
+							<tr>
+								<td>Potatoes</td>
+								<td rowspan="4">Produce</td>
+								<td rowspan="4">5</td>
+								<td>$3.2</td>
+							</tr>
+
+							<tr>
+								<td>Carrots</td>
+								<td>$2.2</td>
+							</tr>
+
+							<tr>
+								<td>Garlic</td>
+								<td>$0.98</td>
+							</tr>
+
+							<tr>
+								<td>Onions</td>
+								<td>$5.98</td>
+							</tr>
+
+						</tbody>
+					
+						<tfoot>
+							<tr>
+								<th colspan="3" style="background: rgb(245, 244, 244);">Total Aisles</th>
+								<th style="background: rgb(245, 244, 244);">5</th>
+							</tr>
+						</tfoot>
+					</table>
+
+					<br>
+					<br>
+
+					<table style="width:60%; background: white; border-color: rgb(228, 226, 226);" border="1px">
+						<caption style="font-size: small; color: rgb(161, 161, 161)">Table 2</caption>
+						<thead>
+							<tr>
+								<th colspan="4" style="text-align:center; background: rgb(228, 226, 226)">Apple Varieties</th>
+							<tr>
+
+							<tr>
+								<th>Name</th>
+								<th>Origin</th>
+								<th>Price</th>
+								<th>Image</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td colspan="4" style="background: rgb(245, 244, 244);">Home</td>								
+							</tr>
+
+							<tr>
+								<td>Fresh Red Delicious</td>
+								<td>Canada</td>
+								<td>$0.98</td>
+								<td><img src="https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-red-delicious-apples-000325189.jpg"></td>
+							</tr>
+
+							<tr>
+								<td colspan="4" style="background: rgb(245, 244, 244);">Imported</td>								
+							</tr>
+
+							<tr>
+								<td>Fresh fuji</td>
+								<td rowspan="2">Japan</td>
+								<td>$1</td>
+								<td><img src="https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-fuji-apples-000325191.jpg"></td>
+							</tr>							
+
+							<tr>
+								<td>Fresh Opal Gold</td>
+								<td>$1.11</td>
+								<td><img src="https://images.heb.com/is/image/HEBGrocery/prd-small/fresh-opal-gold-apples-001259351.jpg"></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<p>
+						Table 1 shows the aisle and price details of various items available in our store. More items will be added in the coming days.<br>
+						Table 2 displays the apple varieties available in our store for sale next week. Flyer for the same is available from the store.<br>
+						Hurry Up! Limited Stocks Available.
+					</p>
+					</section>
+					<br><br>
+					<section>
+						<h4>Lists</h4>
+						<ol>
+							<li>Diary</li>
+							<ul>
+								<li>
+									Milk
+								</li>
+								<li>
+									Eggs
+								</li>
+								<li>
+									Butter
+								</li>
+								<li>
+									Cheese
+								</li>
+								<li>
+									Yogurt
+								</li>
+							</ul>
+							<li>Meat/Protien</li>
+							<ul>
+								<li>
+									Chicken
+								</li>
+								<li>
+									Red Meat
+								</li>
+								<li>
+									White fish
+								</li>
+								<li>
+									Oily fish
+								</li>
+							</ul>
+							<li>Baking</li>
+							<ul>
+								<li>
+									Sugar
+								</li>
+								<li>
+									Baking powder
+								</li>
+								<li>
+									Vanilla extract
+								</li>
+								<li>
+									Flour
+								</li>
+							</ul>
+							<li>Produce</li>
+							<ul>
+								<li>
+									Potatoes
+								</li>
+								<li>
+									Carrots
+								</li>
+								<li>
+									Onions
+								</li>
+								<li>
+									Garlic
+								</li>
+							</ul>
+							<li>Condiments</li>
+							<ul>
+								<li>
+									Salt
+								</li>
+								<li>
+									Pepper
+								</li>
+								<li>
+									Oil
+								</li>
+								<li>
+									Honey
+								</li>
+							</ul>
+						</ol>
+
+						<br>
+						<p>The list shows a grocery list that can be used while purchasing items from our store. Please take a print out of the same for your convenience.<br>
+						This is just a sample list. Only few items are displayed due to the space limitations.
+						</p>
+					
+					</section>
+
+					<br><br>
+					<section>						
+						<h4>Images</h4>
+						<table>
+							<tbody>
+								<tr>
+									<td><img alt="whiteforest-pastry" src="https://images.unsplash.com/photo-1588539373909-09cea16edd86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" width="321px" height="426px"></td>
+									<td><img alt="walnut-pastry" src="https://images.unsplash.com/photo-1564988209213-c0de88d3c8ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=459&q=80" width="321px" height="426px"></td>
+									<td><img alt="blueberry-pastry" src="https://images.unsplash.com/photo-1567171466295-4afa63d45416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" width="321px" height="426px"></td>
+								</tr>
+
+								<tr>
+									<td colspan="3"><img alt="bakery" src="https://images.unsplash.com/photo-1601740982034-56bc80e986ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1629&q=80" width="967px" height="490px"></td>
+								</tr>
+							</tbody>
+						</table>	
+						<br>
+						<p>
+							Our bakery section that will be opening soon will have a wide variety of pastries available. Birthday and other special occasion cakes will also be available for preorder.<br>
+							<span style="color: rgb(161, 161, 161);font-size: small;">**Pictures shown are for illustration purpose only. Actual items may vary.</span>
+						</p>					
+					</section>
+					
+					<br><br>
+					<section>
+						<h4>Audio</h4>
+						<audio controls src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-audio.mp3"></audio>
+						<br><br>
+						<p>A sample audio file to listen and experience audio embedding in websites. Click on the play button to start the audio.</p>
+					
+					</section>
+
+					<br><br>
+					<section>
+						<h4>Video</h4>
+						<video controls src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-video.mp4"></video>
+						<br><br>
+						<p>A sample video file to watch and experience video embedding in websites. Click on the play button to start playing the video.</p>
+					
+					</section>
+					<br><br>
+
+
+				</main>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
