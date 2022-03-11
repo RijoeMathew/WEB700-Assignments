@@ -176,7 +176,7 @@ module.exports.addStudent = function(studentData){
                 studentData.TA = true;
             }
             dataCollection.students.push(studentData)
-            resolve(); 
+            resolve();
         }
         else{
             reject("no results returned"); //reject the promise since studentData is empty
