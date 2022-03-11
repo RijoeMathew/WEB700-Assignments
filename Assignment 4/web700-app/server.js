@@ -73,13 +73,34 @@ app.get("/htmlDemo", (req, res) => {
     });
 
 
+app.get("/students/add", (req, res) => {     
+    res.sendFile(path.join(__dirname +'/views/addStudent.html'))
+    });
+
+
+app.get("/public/css/theme.css", (req, res) => {     
+    res.sendFile(path.join(__dirname +'/public/css/theme.css'))
+    });
+
+
+//added body parser
+app.use(express.urlencoded({ extended: true }));
+
+app.post('/students/add', function (req, res) {
+    collegeData.addStudent(req.body).then(()=>{res.redirect('http://localhost:8080/students')})
+    .catch(() => {res.send(JSON.stringify({message:"no results"}) )})
+    })
+        
+
 // used to add middleware to return page not found message when the user enters a route that is not matched with anything in the app 
 app.use((req, res) => {
     res.status(404).send("Page Not Found");
     });
 
 // used to identify "public" folder as a source for static files
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname +'/public')));
+
+
 
 // checks if initialize method is successfull then setup http server to listen on HTTP_PORT, if initalize method invoked reject error is displayed on console
 collegeData.initialize().then(() => {

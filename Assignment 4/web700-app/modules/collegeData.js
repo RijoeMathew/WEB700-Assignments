@@ -162,3 +162,25 @@ module.exports.getStudentByNum = function(num){
     })
     };    
 
+
+//creating Promise object for addStudent function
+module.exports.addStudent = function(studentData){
+    return new Promise(function(resolve, reject){
+        if (studentData.length != 0){
+            studentNum = dataCollection.students.length + 1;
+            studentData.studentNum = studentNum
+            if (!('TA' in studentData)){
+                studentData.TA = false;
+            }
+            else{
+                studentData.TA = true;
+            }
+            dataCollection.students.push(studentData)
+            resolve(); 
+        }
+        else{
+            reject("no results returned"); //reject the promise since studentData is empty
+        } 
+               
+    });
+    };  
