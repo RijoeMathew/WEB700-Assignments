@@ -28,7 +28,7 @@ body,html {
 
 .navbar-light .navbar-brand{
     font-family: 'Berkshire Swash', cursive;
-    color: blue !important;
+    color: rgb(83, 83, 250) !important;
     text-shadow: 0px 1px 2px black;
 }
 
@@ -44,7 +44,11 @@ a.nav-link{
 
 a.nav-link:hover{
     font-family: 'Righteous', cursive;
-    color: blue !important;
+    color: rgb(83, 83, 250) !important;
+}
+
+.nav-item.active{
+    text-shadow: 0px 1px 5px black;  
 }
 
 
@@ -77,7 +81,7 @@ h1,h2,h3,h4,h5,h6{
   }
   
 a{
-    color: rgb(115, 44, 248);
+    color: rgb(148, 148, 243);
   }
 
 a:hover{
@@ -98,8 +102,13 @@ img:hover{
 }  
 
 
+video{
+    border-radius: 8px;
+}
+
+
 input.btn-primary{
-    background-color: blue;
+    background-color: rgb(44, 44, 248);
     color: white;
     -webkit-box-shadow: 0px 1px 24px 9px rgba(0,0,0,0.77);
     -moz-box-shadow: 0px 1px 24px 9px rgba(0,0,0,0.77);
@@ -110,7 +119,7 @@ input.btn-primary{
 
 input.btn-primary:hover{
     background-color: rgb(39, 38, 38);
-    color: blue;
+    color: rgb(44, 44, 248);
     -webkit-box-shadow: 0px 1px 24px 9px rgba(0,0,0,0.77);
     -moz-box-shadow: 0px 1px 24px 9px rgba(0,0,0,0.77);
     box-shadow: 0px 1px 24px 9px rgba(0,0,0,0.77);

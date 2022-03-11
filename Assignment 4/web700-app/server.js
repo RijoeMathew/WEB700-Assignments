@@ -6,7 +6,7 @@
 * 
 *  Name: Rijoe Chacko Mathew Student ID: 132469214 Date: 11-MAR-22
 *
-*  Online (Heroku) Link: 
+*  Online (Heroku) Link: https://aqueous-springs-78471.herokuapp.com/
 *
 ********************************************************************************/
 
@@ -19,7 +19,6 @@ var app = express();
 
 // setup a 'route' to listen on the url path /students and additionaly to /students?course=value
 app.get("/students", (req, res) => {
-
     
     if (Object.keys(req.query).length == 0){    //checks if the req.query object is empty 
     collegeData.getAllStudents().then(success => {res.send(JSON.stringify(success))})  //use the getAllStudents to get all student objects and sends the json formatted string if successfull
@@ -87,7 +86,7 @@ app.get("/public/css/theme.css", (req, res) => {
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/students/add', function (req, res) {
-    collegeData.addStudent(req.body).then(()=>{res.redirect('http://localhost:8080/students')})
+    collegeData.addStudent(req.body).then(()=>{res.redirect('/students')})
     .catch(() => {res.send(JSON.stringify({message:"no results"}) )})
     })
         
